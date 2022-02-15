@@ -13,4 +13,5 @@ FROM
 
 WHERE 
 	s.avg_goals > (SELECT AVG(home_goal + away_goal) 
-                    FROM match WHERE season = '2012/2013'); --Filters for stages where the average goals exceeds the overall average in 2012/2013
+                    FROM match WHERE season = '2012/2013') --Filters for stages where the average goals exceeds the overall average in 2012/2013
+;
