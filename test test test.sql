@@ -1,0 +1,2 @@
+SELECT
+	Concat('test')
