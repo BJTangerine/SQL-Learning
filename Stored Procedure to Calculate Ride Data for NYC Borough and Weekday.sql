@@ -15,8 +15,7 @@ SELECT
 	FORMAT(SUM(DATEDIFF(SECOND, PickupDate, DropOffDate))/60, 'n', 'de-de') AS 'TotalRideMin' -- Displays TotalRideMin in the German format
 
 FROM YellowTripData
-INNER JOIN TaxiZoneLookup AS Zone 
-ON PULocationID = Zone.LocationID
+	INNER JOIN TaxiZoneLookup AS Zone ON PULocationID = Zone.LocationID
 
 WHERE 
     TripDistance > 0
