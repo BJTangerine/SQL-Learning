@@ -15,5 +15,6 @@ SELECT
 FROM ModePrice
 
 -- uses CTE to return value of OrderPrice with highest row num
-WHERE UnitPriceFrequency IN (SELECT MAX(UnitPriceFrequency) FROM ModePrice)
+WHERE 
+       UnitPriceFrequency IN (SELECT MAX(UnitPriceFrequency) FROM ModePrice)
 ;
