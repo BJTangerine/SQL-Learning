@@ -2,8 +2,10 @@
 WITH ModePrice (OrderPrice, UnitPriceFrequency)
 AS
 (
-       SELECT OrderPrice,
+       SELECT 
+       OrderPrice,
        ROW_NUMBER() OVER (PARTITION BY OrderPrice ORDER BY OrderPrice) AS UnitPriceFrequency
+       
        FROM Orders
 )
 
