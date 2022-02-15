@@ -1,2 +1,0 @@
-SELECT
-	Concat('test')
